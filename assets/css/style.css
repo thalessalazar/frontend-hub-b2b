@@ -1,0 +1,111 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+
+
+1.  Template default CSS
+	1.0 Root variables
+	1.1	Variables
+	1.2	Mixins
+	1.3	Flexbox
+	1.4	Reset
+-------------------------------------------------------------------*/
+:root {
+	--primary-dark: #0E2235;
+	--primary: #112A41;
+	--primary-light-1: #1B4469;
+	--primary-light-2: #265E92;
+	--primary-light-3: #3178BA;
+	--primary-light-4: #4D92D0;
+	--primary-light-5: #76AADB;
+	--primary-light-6: #D7E6F4;
+
+	--secondary-dark: #DA261A;
+	--secondary: #E84B41;
+	--secondary-light: #ED756D;
+
+	--text-dark: #050D14;
+	--text-light: #F7FAFD;
+ 
+	--warning-negative: #EC5D5C;
+	--warning-negative-light: #FAD2D1;
+	--warning-positive: #7DDDA9;
+	--warning-positive-light: #D7F4E4;
+	--warning-warning: #EEE16C;
+	--warning-warning-light: #FAF6D1;
+
+	--background-foreground: #212121;
+	--background-background: #FAFAFA;
+	--background-background-dark: #F2F2F2;
+	--background-background-dark-2: #CCCCCC;
+	--background-button: #E5E5E5;
+}
+
+html, body {
+	height: 100%;
+	font-family: "Metropolis", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	color: #111111; 
+}
+
+h3 {
+	font-size: 46px;
+	letter-spacing: 0px;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 33px;
+	letter-spacing: 0.25px;
+	font-weight: 600;
+} 
+
+h5 {
+	font-size: 26px;
+	letter-spacing: 0px;
+	font-weight: 400;
+}
+
+h6 {
+	font-size: 19px;
+	letter-spacing: 0.15px;
+	font-weight: 500;
+}
+
+p {
+	font-size: 15px;
+	font-family: "Lato", sans-serif;
+	color: #727171;
+	font-weight: 400;
+	line-height: 25px;
+	margin: 0 0 15px 0;
+}
+
+button {
+	font-size: 14px;
+	letter-spacing: 1.25px;
+	font-weight: 500;
+}
+
+img {
+	max-width: 100%;
+}
+
+input:focus, select:focus, button:focus, textarea:focus {
+	outline: none;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+	outline: none;
+	color: #ffffff;
+}
+
+ul, ol {
+	padding: 0;
+	margin: 0;
+}
