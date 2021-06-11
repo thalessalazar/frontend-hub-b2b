@@ -109,3 +109,36 @@ ul, ol {
 	padding: 0;
 	margin: 0;
 }
+
+/* Welcome Banner Wrapper */
+
+#side .side-wrapper {
+	width: 30%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    overflow-y: auto;
+    background-color: var(--primary);
+    bottom: 0;
+    transition: left .5s ease-out;
+	display: flex;
+	justify-content: center;
+	border-bottom-right-radius: 5%;
+	border-top-right-radius: 5%;
+}
+
+#side .side-wrapper .side-text-wrapper h4{
+	color: var(--text-light);
+	position: relative;
+	top: 43%;
+}
+
+#side .side-wrapper .side-text-wrapper h4>span {
+	color: var(--secondary);
+}
+
+#main {
+	margin-left: 30%;
+	padding: 2rem;
+}
