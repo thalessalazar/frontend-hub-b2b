@@ -10,6 +10,7 @@
 	1.3	Flexbox
 	1.4	Reset
 -------------------------------------------------------------------*/
+
 :root {
 	--primary-dark: #0E2235;
 	--primary: #112A41;
@@ -19,21 +20,17 @@
 	--primary-light-4: #4D92D0;
 	--primary-light-5: #76AADB;
 	--primary-light-6: #D7E6F4;
-
 	--secondary-dark: #DA261A;
 	--secondary: #E84B41;
 	--secondary-light: #ED756D;
-
 	--text-dark: #050D14;
 	--text-light: #F7FAFD;
- 
 	--warning-negative: #EC5D5C;
 	--warning-negative-light: #FAD2D1;
 	--warning-positive: #7DDDA9;
 	--warning-positive-light: #D7F4E4;
 	--warning-warning: #EEE16C;
 	--warning-warning-light: #FAF6D1;
-
 	--background-foreground: #212121;
 	--background-background: #FAFAFA;
 	--background-background-dark: #F2F2F2;
@@ -49,7 +46,7 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-	color: #111111; 
+	color: #111111;
 }
 
 h3 {
@@ -62,7 +59,7 @@ h4 {
 	font-size: 33px;
 	letter-spacing: 0.25px;
 	font-weight: 600;
-} 
+}
 
 h5 {
 	font-size: 26px;
@@ -110,35 +107,160 @@ ul, ol {
 	margin: 0;
 }
 
-/* Welcome Banner Wrapper */
+.noscroll {
+	overflow: hidden;
+}
 
-#side .side-wrapper {
-	width: 30%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    overflow-y: auto;
-    background-color: var(--primary);
-    bottom: 0;
-    transition: left .5s ease-out;
+.overlay {
+	overflow-wrap: initial;
+}
+
+#app {
+	margin: 0;
+	height: 100%;
+	max-width: 100%;
+	padding: 0;
+}
+
+.app-wrapper {
+	height: 100%;
+	margin: 0;
+}
+
+.side {
+	background-color: var(--primary);
+	height: 100%;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	bottom: 0;
+	padding: 0;
+	width: 400px;
+}
+
+.side-text-wrapper {
+	height: 100%;
 	display: flex;
 	justify-content: center;
-	border-bottom-right-radius: 5%;
-	border-top-right-radius: 5%;
+	align-items: center;
 }
 
-#side .side-wrapper .side-text-wrapper h4{
+.side-text-wrapper h4 {
 	color: var(--text-light);
-	position: relative;
-	top: 43%;
 }
 
-#side .side-wrapper .side-text-wrapper h4>span {
+.side-text-wrapper h4>span {
 	color: var(--secondary);
 }
 
-#main {
-	margin-left: 30%;
-	padding: 2rem;
+.main {
+	padding: 180px 122px 0 122px;
+	background-color: var(--background-background);
+	margin-left: 400px;
+	width: 100%;
+}
+
+.wrapper-stepper {
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.wrapper-stepper>.bs-stepper-header {
+	width: 100%;
+	justify-content: space-between;
+}
+
+.bs-stepper-circle {
+	width: 48px;
+	height: 48px;
+	align-items: center;
+	font-size: 26px;
+	letter-spacing: 0;
+	font-weight: 400;
+	border-radius: 8px;
+	background: none;
+	border: 1px solid var(--primary-light-6);
+	color: var(--text-dark);
+}
+
+.active .bs-stepper-circle {
+	color: var(--text-light);
+	background: var(--primary);
+}
+
+.bs-stepper-label {
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 1.25px;
+	margin-left: 9px;
+}
+
+.bs-stepper-loader {
+	padding: 20px;
+}
+
+.bs-stepper-loader .progress .progress-bar {
+	background: var(--secondary);
+}
+
+.bs-stepper-content {
+	padding-top: 20px;
+}
+
+.bs-stepper-content label {
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	font-weight: 400;
+	margin-bottom: 0px;
+} 
+
+.bs-stepper-content input[type="text"], input[type="email"], input[type="password"] {
+	background: none;
+	border: 1px solid var(--background-background-dark-2);
+	border-radius: 8px;
+	padding: 20px 15px 20px 15px;
+}
+
+.bs-stepper-content input[type="password"] {
+	letter-spacing: 1px;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.bs-stepper-group-buttons {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-top: 40px;
+}
+
+.btn-next-form {
+	margin-left: 10px;
+}
+
+.btn-next-form {
+	border-radius: 150px;
+	background: var(--primary-light-1);
+	border: none;
+	padding: 17px;
+	font-size: 14px;
+	letter-spacing: 1.25px;
+	font-weight: 400;
+}
+
+.btn-previous-form {
+	background: none;
+	color: var(--text-dark);
+	border: none;
+	font-size: 14px;
+	letter-spacing: 1.25px;
+	font-weight: 400;
+}
+
+.btn-previous-form:hover {
+	background: none;
+	color: var(--primary-light-1);
+	text-decoration: underline;
 }
