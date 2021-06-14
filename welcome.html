@@ -75,24 +75,26 @@
 
           <div class="bs-stepper-content overlay">
             <form class="needs-validation" onSubmit="return false" novalidate>
+
               <div id="test-form-1" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormTrigger1">
-                <div class="form-group mb-4">
-                  <label for="inputMailForm">Nova Senha</label>
-                  <input id="inputMailForm" type="password" class="form-control" placeholder="" required>
-                  <div class="invalid-feedback"> Preencha esse campo. </div>
-                </div>
 
-                <div class="form-group mb-4">
-                  <label for="inputMailForm">Confirmar Senha</label>
-                  <input id="inputMailForm" type="password" class="form-control" placeholder="" required>
-                  <div class="invalid-feedback">Preencha esse campo.</div>
+                <div class="row">
+                  <div class="form-group mb-4 col-12">
+                    <label for="inputPassword">Nova Senha</label>
+                    <input id="inputPassword" type="password" class="form-control" placeholder="" required>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  <div class="form-group mb-4 col-12">
+                    <label for="inputConfirmPassword">Confirmar Senha</label>
+                    <input id="inputConfirmPassword" type="password" class="form-control" placeholder="" required>
+                    <div class="invalid-feedback"></div>
+                  </div>
+  
+                  <div class="bs-stepper-group-buttons">
+                    <!-- <button class="btn btn-primary btn-previous-form">previous</button> -->
+                    <button class="btn btn-primary btn-next-form">Atualizar Senha</button>
+                  </div>
                 </div>
-
-                <div class="bs-stepper-group-buttons">
-                  <!-- <button class="btn btn-primary btn-previous-form">previous</button> -->
-                  <button class="btn btn-primary btn-next-form">Atualizar Senha</button>
-                </div>
-
               </div>
               <div id="test-form-2" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormTrigger2">
                 <div class="form-group">
