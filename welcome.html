@@ -40,23 +40,21 @@
         <div id="stepperForm" class="bs-stepper">
           <div class="wrapper-stepper">
             <div class="bs-stepper-header" role="tablist">
-              <div class="step" data-target="#test-form-1">
+              <div class="step" data-target="#test-form-1" id="step-1">
                 <button type="button" class="step-trigger" role="tab" id="stepperFormTrigger1"
                   aria-controls="test-form-1">
                   <span class="bs-stepper-circle">1</span>
                   <span class="bs-stepper-label">Atualizar Senha</span>
                 </button>
               </div>
-
-              <div class="step" data-target="#test-form-2">
+              <div class="step" data-target="#test-form-2" id="step-2">
                 <button type="button" class="step-trigger" role="tab" id="stepperFormTrigger2"
                   aria-controls="test-form-2">
                   <span class="bs-stepper-circle">2</span>
-                  <span class="bs-stepper-label">Password</span>
+                  <span class="bs-stepper-label">Dados Pessoais</span>
                 </button>
               </div>
-
-              <div class="step" data-target="#test-form-3">
+              <div class="step" data-target="#test-form-3" id="step-3">
                 <button type="button" class="step-trigger" role="tab" id="stepperFormTrigger3"
                   aria-controls="test-form-3">
                   <span class="bs-stepper-circle">3</span>
@@ -65,19 +63,15 @@
               </div>
             </div>
           </div>
-
           <div class="bs-stepper-loader">
             <div class="progress">
-              <div class="progress-bar" id="progressbar1" role="progressbar" style="width: 1%" aria-valuenow="10"
+              <div class="progress-bar" id="progressbar" role="progressbar" style="width: 1%" aria-valuenow="10"
                 aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
-
           <div class="bs-stepper-content overlay">
             <form class="needs-validation" onSubmit="return false" novalidate>
-
               <div id="test-form-1" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormTrigger1">
-
                 <div class="row">
                   <div class="form-group mb-4 col-12">
                     <label for="inputPassword">Nova Senha</label>

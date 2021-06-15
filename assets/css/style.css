@@ -137,6 +137,8 @@ ul, ol {
 	bottom: 0;
 	padding: 0;
 	width: 400px;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
 }
 
 .side-text-wrapper {
@@ -197,6 +199,11 @@ ul, ol {
 	margin-left: 9px;
 }
 
+.complete .bs-stepper-circle {
+	background: var(--primary-light-6);
+	color: var(--text-dark);
+}
+
 .bs-stepper-loader {
 	padding: 20px;
 }
@@ -234,6 +241,7 @@ ul, ol {
 	justify-content: flex-end;
 	align-items: center;
 	margin-top: 40px;
+	margin-left: auto;
 }
 
 .btn-next-form {
