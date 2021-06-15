@@ -73,6 +73,7 @@
             <form class="needs-validation" onSubmit="return false" novalidate>
               <div id="test-form-1" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormTrigger1">
                 <div class="row">
+
                   <div class="form-group mb-4 col-12">
                     <label for="inputPassword">Nova Senha</label>
                     <input id="inputPassword" type="password" class="form-control" placeholder="" required>
@@ -83,26 +84,82 @@
                     <input id="inputConfirmPassword" type="password" class="form-control" placeholder="" required>
                     <div class="invalid-feedback"></div>
                   </div>
-  
                   <div class="bs-stepper-group-buttons">
-                    <!-- <button class="btn btn-primary btn-previous-form">previous</button> -->
+                    <button class="btn btn-primary btn-next-form">Atualizar Senha</button>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div id="test-form-2" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormTrigger2">
+                <div class="row">
+
+                  <div class="form-group mb-4 col-12">
+                    <label for="inputFullName">Nome Completo <span class="text-danger font-weight-bold"></span></label>
+                    <input id="inputFullName" type="text" class="form-control" placeholder="" required>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  
+                  <div class="form-group mb-4 col-6">
+                    <label for="inputEmail">E-mail<span class="text-danger font-weight-bold"></span></label>
+                    <input id="inputEmail" type="email" class="form-control" placeholder="" required>
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="form-group mb-4 col-6">
+                    <label for="inputPhone">Telefone<span class="text-danger font-weight-bold"></span></label>
+                    <input id="inputPhone" type="text" class="form-control" placeholder="" required>
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="form-group mb-4 col-12">
+                    <label for="inputEmailCorp">E-mail Corporativo<span class="text-danger font-weight-bold"></span></label>
+                    <input id="inputEmailCorp" type="email" class="form-control" placeholder="" required>
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="form-group col-6">
+                    <div class="select-list">
+                      <div class="select-list-item">
+                        <label for="">Setor</label>
+                        <select name="" id="">
+                          <option value="">a</option>
+                          <option value="">a</option>
+                          <option value="">a</option>
+                          <option value="">a</option>
+                          <option value="">a</option>
+                          <option value="">a</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group col-6">
+                    <div class="select-list">
+                      <div class="select-list-item">
+                        <label for="">Setor</label>
+                        <select name="" id="">
+                          <option value="">a</option>
+                          <option value="">a</option>
+                          <option value="">a</option>
+                          <option value="">a</option>
+                          <option value="">a</option>
+                          <option value="">a</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bs-stepper-group-buttons">
+                    <button class="btn btn-primary btn-previous-form">Voltar</button>
                     <button class="btn btn-primary btn-next-form">Atualizar Senha</button>
                   </div>
                 </div>
               </div>
-              <div id="test-form-2" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormTrigger2">
-                <div class="form-group">
-                  <label for="inputPasswordForm">Email <span class="text-danger font-weight-bold"></span></label>
-                  <input id="inputPasswordForm" type="email" class="form-control" placeholder="email" required>
-                  <div class="invalid-feedback">Please fill the password field</div>
-                </div>
 
-                <div class="bs-stepper-group-buttons">
-                  <button class="btn btn-primary btn-previous-form">Voltar</button>
-                  <button class="btn btn-primary btn-next-form">Atualizar Senha</button>
-                </div>
 
-              </div>
+
               <div id="test-form-3" role="tabpanel" class="bs-stepper-pane fade text-center"
                 aria-labelledby="stepperFormTrigger3">
                 <button type="submit" class="btn btn-primary mt-5">Submit</button>
@@ -129,11 +186,6 @@
         </div>
     </div> -->
 
-
-
-
-
-
   <script src="assets/js/jquery-3.3.1.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/jquery.nice-select.min.js"></script>
@@ -144,6 +196,7 @@
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="assets/js/bs-stepper/bs-stepper.min.js"></script>
   <script src="assets/js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/nice-select.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 

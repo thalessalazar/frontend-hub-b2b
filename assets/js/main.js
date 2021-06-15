@@ -13,8 +13,13 @@
   var inputPassword = document.getElementById('inputPassword');
   var inputConfirmPassword = document.getElementById('inputConfirmPassword');
 
+  // step 2
+  var inputFullName = document.getElementById("inputFullName");
+  var inputEmail = document.getElementById("inputEmail");
+  var inputPhone = document.getElementById("inputPhone");
+  var inputEmailCorp = document.getElementById("inputEmailCorp");
+
   var stepperPanList = [].slice.call(stepperFormEl.querySelectorAll('.bs-stepper-pane'));
-  var inputPasswordForm = document.getElementById('inputPasswordForm');
   var form = stepperFormEl.querySelector('.bs-stepper-content form');
 
   var progressBar = document.getElementById("progressbar");
@@ -62,6 +67,27 @@
       }
     }
 
+    if (stepperPan.getAttribute("id") === "test-form-2") {
+      if (!inputFullName.value.length) {
+        error.push({ id: inputFullName.id, err: "Preencha este campo." });
+      }
+      if (!inputEmail.value.length) {
+        error.push({ id: inputEmail.id, err: "Preencha este campo." });
+      }
+      if (!inputPhone.value.length) {
+        error.push({ id: inputPhone.id, err: "Preencha este campo." });
+      }
+      if (!inputEmailCorp.value.length) {
+        error.push({ id: inputEmailCorp.id, err: "Preencha este campo." });
+      }
+      if (!validEmail(inputEmail)) {
+        error.push({ id: inputEmail.id, err: "E-mail inválido." });
+      }
+      if (!validEmail(inputEmailCorp)) {
+        error.push({ id: inputEmailCorp.id, err: "E-mail inválido." });
+      }
+    }
+
     if (error.length > 0) {
       event.preventDefault();
       updateErrorMsg(error);
@@ -103,6 +129,10 @@
     progressBar.style.width = `${percent}%`
   }
 
+  const rollbackProgressBar = (step) => {
+    
+  }
+
   const updateCompleteStep = () => {
     const stepper = document.querySelector(".step.active")
     stepper.classList.add("complete");
@@ -118,6 +148,24 @@
     const circle = document.querySelector(`#step-${step + 1} .bs-stepper-circle`);
     console.log(circle);
     circle.innerHTML = step + 1;
+  }
+
+  const validEmail = (field) => {
+    let user = field.value.substring(0, field.value.indexOf("@"));
+    let domain = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
+
+    if ((user.length >= 1) &&
+      (domain.length >= 3) &&
+      (user.search("@") == -1) &&
+      (domain.search("@") == -1) &&
+      (user.search(" ") == -1) &&
+      (domain.search(" ") == -1) &&
+      (domain.search(".") != -1) &&
+      (domain.indexOf(".") >= 1) &&
+      (domain.lastIndexOf(".") < domain.length - 1)) {
+      return true;
+    }
+    return false;
   }
 
 })();

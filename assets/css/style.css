@@ -157,7 +157,7 @@ ul, ol {
 }
 
 .main {
-	padding: 180px 122px 0 122px;
+	padding: 150px 122px 0 122px;
 	background-color: var(--background-background);
 	margin-left: 400px;
 	width: 100%;
@@ -221,7 +221,7 @@ ul, ol {
 	letter-spacing: 0.5px;
 	font-weight: 400;
 	margin-bottom: 0px;
-} 
+}
 
 .bs-stepper-content input[type="text"], input[type="email"], input[type="password"] {
 	background: none;
@@ -263,7 +263,7 @@ ul, ol {
 	color: var(--text-dark);
 	border: none;
 	font-size: 14px;
-	letter-spacing: 1.25px;
+	letter-spacing: 0.25px;
 	font-weight: 400;
 }
 
@@ -271,4 +271,40 @@ ul, ol {
 	background: none;
 	color: var(--primary-light-1);
 	text-decoration: underline;
+}
+
+form .select-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -20px;
+}
+
+form .select-list .select-list-item {
+	float: left;
+	-webkit-box-flex: 0;
+	/* -ms-flex: 0 0 50%;
+    flex: 0 0 50%; */
+	width: 100%;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+form .select-list .select-list-item .nice-select {
+	width: 100%;
+	height: 40px;
+	border: 1px solid var(--background-background-dark-2
+	);
+	/* background: none; */
+    border-radius: 8px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+	background: none;
+	/* padding: 20px 15px 20px 15px; */
+}
+
+form .select-list .select-list-item .nice-select.open .list {
+	width: 100% !important;
 }
