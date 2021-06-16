@@ -58,7 +58,7 @@
                 <button type="button" class="step-trigger" role="tab" id="stepperFormTrigger3"
                   aria-controls="test-form-3">
                   <span class="bs-stepper-circle">3</span>
-                  <span class="bs-stepper-label">Validate</span>
+                  <span class="bs-stepper-label">Adicionar Colaboradores</span>
                 </button>
               </div>
             </div>
@@ -100,7 +100,7 @@
                     <input id="inputFullName" type="text" class="form-control" placeholder="" required>
                     <div class="invalid-feedback"></div>
                   </div>
-                  
+
                   <div class="form-group mb-4 col-6">
                     <label for="inputEmail">E-mail<span class="text-danger font-weight-bold"></span></label>
                     <input id="inputEmail" type="email" class="form-control" placeholder="" required>
@@ -114,16 +114,16 @@
                   </div>
 
                   <div class="form-group mb-4 col-12">
-                    <label for="inputEmailCorp">E-mail Corporativo<span class="text-danger font-weight-bold"></span></label>
+                    <label for="inputEmailCorp">E-mail Corporativo<span
+                        class="text-danger font-weight-bold"></span></label>
                     <input id="inputEmailCorp" type="email" class="form-control" placeholder="" required>
                     <div class="invalid-feedback"></div>
                   </div>
-
                   <div class="form-group col-6">
                     <div class="select-list">
                       <div class="select-list-item">
                         <label for="">Setor</label>
-                        <select name="" id="">
+                        <select name="">
                           <option value="">a</option>
                           <option value="">a</option>
                           <option value="">a</option>
@@ -139,30 +139,51 @@
                     <div class="select-list">
                       <div class="select-list-item">
                         <label for="">Setor</label>
-                        <select name="" id="">
-                          <option value="">a</option>
-                          <option value="">a</option>
-                          <option value="">a</option>
-                          <option value="">a</option>
-                          <option value="">a</option>
-                          <option value="">a</option>
+                        <select name="">
+                          <option value="a">a</option>
+                          <option value="a">a</option>
+                          <option value="a">a</option>
+                          <option value="a">a</option>
+                          <option value="a">a</option>
+                          <option value="a">a</option>
                         </select>
                       </div>
                     </div>
+                  </div>
+                  <div class="bs-stepper-group-buttons">
+                    <button class="btn btn-primary btn-previous-form">Voltar</button>
+                    <button class="btn btn-primary btn-next-form">Próximo Passo</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="test-form-3" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormTrigger3">
+                <div class="row">
+                  <div class="col-12 text-aux mb-15">
+                    <h4>Adicione os colaboradores <br> de sua empresa</h4>
+                    <span class="aux">Deixe a sua plataforma pronta para o uso convidando diretamente seus <br>
+                      colaboradores para fazer parte dela.</span>
+                  </div>
+
+                  <div class="col-12 control-collaborator">
+                    <span class="control"> <span id="actual">3</span>/<span id="total">15</span> colaboradores
+                      restantes</span>
+                  </div>
+
+                  <div id="collaborator-list" class="col-12 collaborator-list">
+
+                  </div>
+
+                  <div class="col-12">
+                    <button id="btnAddCollaborator" class="btn-block btn-add-collaborator"> <i class="fa fa-plus"></i> Adicionar Mais</button>
                   </div>
 
                   <div class="bs-stepper-group-buttons">
                     <button class="btn btn-primary btn-previous-form">Voltar</button>
                     <button class="btn btn-primary btn-next-form">Atualizar Senha</button>
                   </div>
+
                 </div>
-              </div>
-
-
-
-              <div id="test-form-3" role="tabpanel" class="bs-stepper-pane fade text-center"
-                aria-labelledby="stepperFormTrigger3">
-                <button type="submit" class="btn btn-primary mt-5">Submit</button>
               </div>
             </form>
           </div>
@@ -170,21 +191,6 @@
       </div>
     </div>
   </section>
-
-
-  <!-- <div id="app">
-        <div id="side">
-            <div class="side-wrapper">
-                <div class="side-text-wrapper">
-                    <h4>Bem-vindo, <br> <span>Gestor</span></h4>
-                </div>
-            </div>
-        </div>
-
-        <div id="main">
-
-        </div>
-    </div> -->
 
   <script src="assets/js/jquery-3.3.1.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
@@ -198,6 +204,7 @@
   <script src="assets/js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
   <script src="assets/js/nice-select.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/collaborator.js"></script>
 </body>
 
 </html>

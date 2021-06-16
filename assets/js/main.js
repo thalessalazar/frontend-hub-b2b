@@ -96,10 +96,11 @@
       if (nextStep < event.detail.from) {
         rollbackCompleteStep(nextStep)
         rollbackCompleteStep(currentStep)
+        rollbackProgressBar(currentStep);
       } else {
         updateCompleteStep();
+        updateProgressBar(currentStep);
       }
-      updateProgressBar(currentStep);
     }
   });
 
@@ -130,7 +131,11 @@
   }
 
   const rollbackProgressBar = (step) => {
-    
+    let [percent,] = progressBar.style.width.split("%");
+    percent = parseInt(percent);
+    step == 0 ? percent = 1 : percent += 33; 
+
+    progressBar.style.width = `${percent}%`
   }
 
   const updateCompleteStep = () => {
@@ -167,5 +172,4 @@
     }
     return false;
   }
-
 })();
