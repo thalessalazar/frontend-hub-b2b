@@ -37,13 +37,13 @@
   });
 
   stepperFormEl.addEventListener('show.bs-stepper', function (event) {
-    console.log(event);
+    console.log(event.detail);
 
     form.classList.remove('was-validated');
     var nextStep = event.detail.indexStep;
     var currentStep = nextStep;
 
-    console.log(currentStep);
+    console.log( "currentstep", currentStep);
 
     if (currentStep > 0) {
       currentStep--;
@@ -94,9 +94,12 @@
       form.classList.add('was-validated');
     } else {
       if (nextStep < event.detail.from) {
+
+        console.log("nextstep", nextStep)
+        console.log("currentStep", currentStep)
+
         rollbackCompleteStep(nextStep)
-        rollbackCompleteStep(currentStep)
-        rollbackProgressBar(currentStep);
+        rollbackProgressBar(nextStep);
       } else {
         updateCompleteStep();
         updateProgressBar(currentStep);
@@ -133,9 +136,11 @@
   const rollbackProgressBar = (step) => {
     let [percent,] = progressBar.style.width.split("%");
     percent = parseInt(percent);
-    step == 0 ? percent = 1 : percent += 33; 
+    console.log(step);
+    step == 0  ? percent = 1 : percent -= 33; 
 
     progressBar.style.width = `${percent}%`
+    console.log("asdasdasdasdasdasd");
   }
 
   const updateCompleteStep = () => {

@@ -384,3 +384,8 @@ form .select-list .select-list-item .nice-select.open .list {
 .collaborator-list {
 	padding: 0;
 }
+
+button#btnAddCollaborator:disabled {
+	border-color: var(--background-background-dark-2);
+	color: var(--background-background-dark-2);
+}
