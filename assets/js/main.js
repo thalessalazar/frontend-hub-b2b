@@ -19,6 +19,9 @@
   var inputPhone = document.getElementById("inputPhone");
   var inputEmailCorp = document.getElementById("inputEmailCorp");
 
+  var btnStep3 = document.getElementById("btnFinishStep3");
+  var btnBackStep3 = document.getElementById("btnBackFinishStep");
+
   var stepperPanList = [].slice.call(stepperFormEl.querySelectorAll('.bs-stepper-pane'));
   var form = stepperFormEl.querySelector('.bs-stepper-content form');
 
@@ -37,19 +40,13 @@
   });
 
   stepperFormEl.addEventListener('show.bs-stepper', function (event) {
-    console.log(event.detail);
-
     form.classList.remove('was-validated');
     var nextStep = event.detail.indexStep;
     var currentStep = nextStep;
 
-    console.log( "currentstep", currentStep);
-
     if (currentStep > 0) {
       currentStep--;
     }
-
-    localStorage.setItem("currentStep", currentStep);
 
     var stepperPan = stepperPanList[currentStep];
 
@@ -94,10 +91,6 @@
       form.classList.add('was-validated');
     } else {
       if (nextStep < event.detail.from) {
-
-        console.log("nextstep", nextStep)
-        console.log("currentStep", currentStep)
-
         rollbackCompleteStep(nextStep)
         rollbackProgressBar(nextStep);
       } else {
@@ -107,10 +100,39 @@
     }
   });
 
+  btnStep3.addEventListener("click", (event) => {
+    form.classList.remove('was-validated');
+    const emailstep3 = document.getElementsByClassName("emailstep3");
+
+    console.log(emailstep3);
+
+    let error = []; // id - err
+
+    for (let x = 0; x < emailstep3.length; x++) {
+      if (!validEmail(emailstep3[x])) {
+        error.push({ id: emailstep3[x].id, err: "E-mail inválido." });
+      }
+    }
+
+    if (error.length > 0) {
+      console.log(error);
+      updateErrorMsg(error);
+      form.classList.add('was-validated');
+    } else {
+      showFinishStep3();
+      updateProgressBar(3);
+    }
+  });
+
+  btnBackStep3.addEventListener("click", (event) => {
+    hideFinishStep();
+    rollbackProgressBar(2);
+  });
+
   const updateErrorMsg = (error) => {
-    console.log(error)
     error.forEach(err => {
       let valid = document.getElementById(err.id).nextSibling.nextSibling;
+      console.log(valid);
       let errorExisting = ""
 
       if (valid.innerHTML != "") {
@@ -130,17 +152,19 @@
     percent = parseInt(percent);
     percent += 33;
 
+    if(step == 3) {
+      percent = 100;
+    }
+
     progressBar.style.width = `${percent}%`
   }
 
   const rollbackProgressBar = (step) => {
     let [percent,] = progressBar.style.width.split("%");
     percent = parseInt(percent);
-    console.log(step);
-    step == 0  ? percent = 1 : percent -= 33; 
+    step == 0 ? percent = 1 : percent -= 33;
 
-    progressBar.style.width = `${percent}%`
-    console.log("asdasdasdasdasdasd");
+    progressBar.style.width = `${percent}%`;
   }
 
   const updateCompleteStep = () => {
@@ -156,7 +180,6 @@
     stepper.classList.remove("complete");
 
     const circle = document.querySelector(`#step-${step + 1} .bs-stepper-circle`);
-    console.log(circle);
     circle.innerHTML = step + 1;
   }
 
@@ -177,4 +200,21 @@
     }
     return false;
   }
+
+  const showFinishStep3 = () => {
+    const collaboratorStep = document.getElementById("collaboratorStep");
+    collaboratorStep.classList.add("d-none");
+
+    const finishStep3 = document.getElementById("finishStep3");
+    finishStep3.classList.remove("d-none");
+  }
+
+  const hideFinishStep = () => {
+    const collaboratorStep = document.getElementById("collaboratorStep");
+    collaboratorStep.classList.remove("d-none");
+    
+    const finishStep3 = document.getElementById("finishStep3");
+    finishStep3.classList.add("d-none");
+  }
+
 })();

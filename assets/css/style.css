@@ -277,6 +277,22 @@ ul, ol {
 	text-decoration: underline;
 }
 
+
+.btn-previous {
+	background: none;
+	color: var(--text-dark);
+	border: none;
+	font-size: 14px;
+	letter-spacing: 0.25px;
+	font-weight: 400;
+}
+
+.btn-previous:hover {
+	background: none;
+	color: var(--primary-light-1);
+	text-decoration: underline;
+}
+
 form .select-list {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -388,4 +404,10 @@ form .select-list .select-list-item .nice-select.open .list {
 button#btnAddCollaborator:disabled {
 	border-color: var(--background-background-dark-2);
 	color: var(--background-background-dark-2);
+}
+
+.finish-text {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
